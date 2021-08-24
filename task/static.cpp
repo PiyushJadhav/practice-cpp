@@ -10,9 +10,10 @@
 
 // static data member
 // The static data member - has only one instance shared by all the objects created
-// Need to be initialed ( usually outside the class which implements it.)
-// The can be accessed using class::my_static_p or T.my_static_param or T->my_static_p, based on T evaluating my class..
-
+// Need to be initialed ( usually outside the class which implements it.) For const static type, it can be done inside the class, for constexpr static it must be inside class.
+// The can be accessed using class::my_s tatic_p or T.my_static_param or T->my_static_p, based on T evaluating my class..
+// Cannot be muttable - list etc., has to have defined memory at beginning.
+// 
 #include <iostream>
 using namespace std;
 
