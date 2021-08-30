@@ -1,0 +1,43 @@
+@startuml factory
+
+class vehicle
+{
+
+}
+
+class car
+{
+
+}
+
+class bike
+{
+
+}
+
+class creator
+{
+
+}
+
+class createCar
+{
+
+}
+
+class createBike
+{
+
+}
+
+class client
+{
+
+}
+
+class main
+{
+
+}
+
+@enduml
