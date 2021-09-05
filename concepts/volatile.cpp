@@ -32,7 +32,7 @@ using namespace std;
 
 int main( void )
 {
-
+    volatile int a;
     // develop example for volatile normal use with single side effect
 
 

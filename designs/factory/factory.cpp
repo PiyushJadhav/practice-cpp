@@ -136,7 +136,10 @@ class client
         cout << "From constructor of client" << endl;
         
         // create new obj of what I want
-        create->operation();
+        create->factoryMethod();
+
+        // following call also can be made for respective class 
+        // create->factoryMethod();
     }
 
 };
@@ -154,7 +157,7 @@ int main( void )
     {
         cout << "TEST 2. bike" << endl;
         // create objects
-        createCar cBike;
+        createBike cBike;
         client c( &cBike );
     }
     
