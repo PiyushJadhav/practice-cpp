@@ -1,0 +1,86 @@
+@startuml abstract_factory
+
+class furniture_AF
+{
+    + furniture_AF()
+    + ~furniture_AF()
+}
+
+class chair
+{
+    + chair()
+    + ~chair()
+}
+
+class chair_victorian
+{
+    + chair_victorian()
+    + ~chair_victorian()
+}
+
+class chair_modern
+{
+    + chair_victorian()
+    + ~chair_modern()
+}
+
+class sofa
+{
+    + sofa()
+    + ~sofa()
+}
+
+class sofa_victorian
+{
+    + sofa_victorian()
+    + ~sofa_victorian()
+}
+
+class sofa_victorian
+{
+    + sofa_victorian()
+    + ~sofa_victorian()
+}
+
+class victorian_factory
+{
+    + victorian_factory()
+    + ~victorian_factory()
+}
+
+class modern_factory
+{
+    + modern_factory()
+    + ~modern_factory()
+}
+
+class client
+{
+    + client()
+}
+
+class main
+{
+
+}
+
+
+chair <|-- chair_victorian
+chair <|-- chair_modern
+
+sofa <|-- sofa_victorian
+sofa <|-- sofa_modern
+
+furniture_AF <|-- victorian_factory
+furniture_AF <|-- modern_factory
+
+victorian_factory ..> chair_victorian
+modern_factory ..> chair_modern
+
+victorian_factory ..> sofa_victorian
+modern_factory ..> sofa_victorian
+
+main -> client
+client -> furniture_AF
+
+@enduml

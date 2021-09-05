@@ -7,6 +7,7 @@
     a. [Yes] Factory Pattern
         Inheritance pattern used, where base class is used to lay down the foundation of the use of an object, but the inherited objects can define the behaviour.
     b. [] Abstract Factory
+        Inheritance pattern when there are multiple factory pattern involved
         
 
 2. Structural Pattern
