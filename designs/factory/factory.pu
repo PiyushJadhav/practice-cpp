@@ -1,0 +1,69 @@
+@startuml factory
+
+class vehicle
+{
+    + vehicle()
+    + ~vehicle()
+}
+
+class car
+{
+    + car()
+    + ~car()
+}
+
+class bike
+{
+    + bike()
+    + ~bike()
+}
+
+class creator
+{
+    + creator()
+    + ~creator()
+    + virtual vehicle* factoryMethod()
+    + void operation()
+}
+
+class createCar
+{
+    + createCar()
+    + ~createCar()
+    + vehicle* factoryMethod()
+    - car* machina;
+}
+
+class createBike
+{
+    + createBike()
+    + ~createBike()
+    + factoryMethod()
+    - Bike* bici
+}
+
+class client
+{
+    + client()
+}
+
+class main
+{
+
+}
+
+vehicle <|-- car
+vehicle <|-- bike
+
+creator <|-- createCar
+creator <|-- createBike
+
+client -> creator
+
+creator -> vehicle
+
+
+
+main -> client
+
+@enduml
