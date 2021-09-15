@@ -13,44 +13,44 @@
 // Need to be initialed ( usually outside the class which implements it.) For const static type, it can be done inside the class, for constexpr static it must be inside class.
 // The can be accessed using class::my_static_p or T.my_static_param or T->my_static_p, based on T evaluating my class..
 // Cannot be muttable - list etc., has to have defined memory at beginning.
-// 
+//
 #include <iostream>
 using namespace std;
 
 class base {
 public:
-	base( )
-	{
-		cout << "Constructor of the base class" << endl;
-	}
+    base( )
+    {
+        cout << "Constructor of the base class" << endl;
+    }
 
 
-	// cannot be vitual, const or volatile
-	static void print()
-	{
-		// cannot modify non static variable
-		// non_static_var = 1; // error
+    // cannot be virtual, const or volatile
+    static void print()
+    {
+        // cannot modify non static variable
+        // non_static_var = 1; // error
 
-		// does not have access to it either
-		// static_var = non_static_var; // error
+        // does not have access to it either
+        // static_var = non_static_var; // error
 
-		// only can access and modify static non const variables
-		static_var = 2;
-		static_var = const_static_var;
-		cout << "print base class" << endl;
-	}
+        // only can access and modify static non const variables
+        static_var = 2;
+        static_var = const_static_var;
+        cout << "print base class" << endl;
+    }
 
-	private:
-	int non_static_var;
+    private:
+    int non_static_var;
 
-	// static - type - cannot be mutable, need to know the memory at definition
-	static int static_var;
+    // static - type - cannot be mutable, need to know the memory at definition
+    static int static_var;
 
-	// for const static object - it is allowed to define value
-	const static int const_static_var = 10;
+    // for const static object - it is allowed to define value
+    const static int const_static_var = 10;
 
-	// constexpr has to be defined within the class
-	constexpr static int constexpr_static_var = const_static_var;
+    // constexpr has to be defined within the class
+    constexpr static int constexpr_static_var = const_static_var;
 
 };
 
@@ -61,11 +61,11 @@ int base::static_var = 0;
 
 int main()
 {
-	// can call the class's function (not method) without even defining a object  
-	base::print();
+    // can call the class's function (not method) without even defining a object
+    base::print();
 
-	// base class obj
-	base* base_ptr;
+    // base class obj
+    base* base_ptr;
 
 
 }
