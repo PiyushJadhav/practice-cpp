@@ -16,7 +16,7 @@
 // Then the compiler re-reads the value from the memory
 
 // advantage 
-// rereads, so fresh value is present
+// re reads, so fresh value is present
 
 // disadvantage 
 // op= problems, has multiple side effects makes it slower as it access the bus often

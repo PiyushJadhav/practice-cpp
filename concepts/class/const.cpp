@@ -44,7 +44,7 @@ public:
 
     const int const_var = 1;
 
-    constexpr int constexpr_var = const_var;
+    // constexpr int constexpr_var = const_var;
 
 };
 

@@ -49,6 +49,6 @@ int main( void )
 {
     myclass myObj;
     myclass a;
-    a = std::move(myObj);
+    a = std::move(myObj); // rvalue going into lvalue
     foo( myObj );
 }
